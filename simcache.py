@@ -84,11 +84,6 @@ class Cache:
 
 		return result
 
-	#def libera_cache(self):
-	#	'''Versão python para := void libera_cache(t_cache *cache)
-	#	Não sei se isso faz sentido em python.'''
-	#	self.conjunto = []
-
 # Programa principal
 if __name__ == "__main__":
 	try:
@@ -158,11 +153,8 @@ if __name__ == "__main__":
 				# Imprime medidas de desempenho
 				if L2_f:
 					print("%10d %10d %10d %10d"%(n_acessos_cacheL1, n_falhas_cacheL1, n_acessos_cacheL2, n_falhas_cacheL2))
-					#L2.libera_cache()
 				else:
 					print("%10d %10d"%(n_acessos_cacheL1, n_falhas_cacheL1))
-				# Nao sei se faz sentido usando OO. No java o garbage collector eh aleatorio, nao sei se eh o mesmo no python
-				#L1.libera_cache()
 			except FileNotFoundError:
 				print("\nArquivo de acessos não encontrado\n")
 		except FileNotFoundError:
